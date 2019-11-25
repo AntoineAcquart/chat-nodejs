@@ -5,8 +5,6 @@ const fs = require("fs");
 
 app.use(express.static(path.join(__dirname, "Client")));
 
-require(path.join(__dirname, "Controller", "ServerEvent"));
-
 app.get("/", (req, res) => {
   console.log(req.url);
   res.send("===> GET <===");
